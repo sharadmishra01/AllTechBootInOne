@@ -15,7 +15,7 @@ import org.apache.spark.streaming.api.java.JavaStreamingContext;
 
 public class SparkKafkaConnector {
 
-	private static void runSparkStream() {
+	private static void runSparkStream() throws InterruptedException {
 
 		SparkConf conf = new SparkConf().setAppName("kafka-sandbox").setMaster(
 				"local[*]");
@@ -31,10 +31,10 @@ public class SparkKafkaConnector {
 		Map<String, String> kafkaParams = new HashMap<>();
 		kafkaParams.put("metadata.broker.list", "localhost:9092");
 		Set<String> topics = Collections.singleton("mytopic");
-
-		JavaPairInputDStream<String, String> directKafkaStream = Kafka.createDirectStream(ssc, String.class, String.class,
-						StringDecoder.class, StringDecoder.class, kafkaParams,
-						topics);
+//
+//		JavaPairInputDStream<String, String> directKafkaStream = Kafka.createDirectStream(ssc, String.class, String.class,
+//						StringDecoder.class, StringDecoder.class, kafkaParams,
+//						topics);
 
 	}
 
