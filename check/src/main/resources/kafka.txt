@@ -1,0 +1,78 @@
+
+https://kafka.apache.org/quickstart
+
+cd kafka_2.11-0.11.0.0\kafka_2.11-0.11.0.0\bin\windows
+
+Start zoo keeper
+
+Start Kafka Server:
+
+kafka-server-start.bat ..\..\config\server.properties
+
+List Topic:
+
+kafka-topics.bat --list --zookeeper localhost:2181
+
+
+Create Topic:
+
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic check.t
+
+Send Messages:
+kafka-console-producer.bat --broker-list localhost:9092 --topic check.t
+
+cassandra -f
+
+
+
+Cassanndra:
+
+cd apache-cassandra-3.11.1-bin\apache-cassandra-3.11.1\bin
+
+
+
+
+
+
+
+
+https://stackoverflow.com/questions/42135114/how-does-exactly-spring-jpa-hibernate-ddl-auto-property-works-in-spring
+
+https://spring.io/guides/gs/accessing-data-mysql/
+
+
+https://www.dineshonjava.com/microservices-with-spring-boot/#5
+
+
+Dealing with DB in Spring and Repositories:
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+
+
+
+
+Kafka with Spark:
+
+
+http://aseigneurin.github.io/2016/03/03/kafka-spark-avro-consume-messages-with-spark.html
+
+
+
+
+Cassandra:
+
+http://cassandra.apache.org/download/
+http://cassandra.apache.org/doc/latest/getting_started/installing.html
+
+downloaded in E and extracted there only
+
+https://www.tutorialspoint.com/cassandra/cassandra_architecture.htm
+
+python is required for cqsl
+
+
+Creating a micro service usifn STS:
+
+https://www.packtpub.com/mapt/book/application_development/9781786466686/2/ch02lvl1sec24/developing-the-spring-boot-java-microservice-using-sts
+
+
+
