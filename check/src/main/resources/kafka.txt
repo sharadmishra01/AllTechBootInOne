@@ -74,5 +74,9 @@ Creating a micro service usifn STS:
 
 https://www.packtpub.com/mapt/book/application_development/9781786466686/2/ch02lvl1sec24/developing-the-spring-boot-java-microservice-using-sts
 
+Elastic Search:
+
+http://www.baeldung.com/elasticsearch-java
+
 
 
