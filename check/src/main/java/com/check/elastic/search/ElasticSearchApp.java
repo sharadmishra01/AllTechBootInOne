@@ -19,8 +19,7 @@ public class ElasticSearchApp {
 		TransportClient client = null;
 		
 		 Settings settings = Settings.builder()
-				 .put("cluster.name", "elasticsearch").put("transport.type","netty4")
-				 .put("http.type", "netty4").build();
+				 .put("cluster.name", "elasticsearch").build();
 
 
 		
@@ -38,7 +37,7 @@ public class ElasticSearchApp {
 
 		SearchResponse response = client.prepareSearch("bookstore")
 				.setTypes("book").setSearchType(SearchType.DEFAULT)
-				.setQuery(QueryBuilders.matchQuery("title", "sharad")).get();
+				.setQuery(QueryBuilders.multiMatchQuery("sharad", "title", "category")).get();
 
 		SearchHits hits = response.getHits();
 
